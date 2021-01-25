@@ -4,6 +4,7 @@
   "description": "Turn the javascript object into a visual dom structure to achieve the consistent display effect of chrome developtool",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./src",
     "build": "rollup -c"
   },
   "repository": {
@@ -25,6 +26,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "eslint": "^7.18.0",
-    "rollup": "^2.38.0"
+    "rollup": "^2.38.0",
+    "typescript": "^4.1.3"
   }
 }
