@@ -6,7 +6,7 @@
     "commonjs": true,
     "es6": true
   },
-  // "parserOptions": {},
+  "parserOptions": {},
   "plugins": ["@typescript-eslint"],
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "rules": {

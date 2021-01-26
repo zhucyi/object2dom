@@ -5,5 +5,5 @@
   "singleQuote": true,
   "TrailingCooma": "es5",
   "arrowParens": "avoid",
-  "endOfLine": "auto"
+  "endOfLine": "lf"
 }
