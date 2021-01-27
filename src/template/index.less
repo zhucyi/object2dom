@@ -1,0 +1,45 @@
+/* left */
+@level_stage: 10000;
+@bcolor: #848484;
+
+.vc-fold {
+  line-height: 1.5;
+  // word-break: initial;
+  .vc-fold-outer {
+    font-style: italic;
+    padding-left: 0.8em;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.4em;
+      left: 0.15em;
+      width: 0;
+      height: 0;
+      border: transparent solid 0.3em;
+      border-left: #848484 0.42em solid;
+    }
+    &.vc-toggle {
+      &:before {
+        top: 0.5em;
+        left: 0.1em;
+        border: transparent solid 0.3em;
+        border-top: #848484 0.42em solid;
+      }
+    }
+  }
+  .vc-fold-inner {
+    display: none;
+    &.vc-toggle {
+      display: block;
+    }
+    margin-left: 0.8em;
+    > .vc-fold-inner {
+      padding-left: 0.8em;
+    }
+  }
+}
+.vc-code-key {
+  color: #e36eec;
+  font-style: normal;
+}
