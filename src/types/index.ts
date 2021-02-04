@@ -1,3 +1,6 @@
+export * from '@/types/base';
+
+export type Fn<T> = (...args: unknown[]) => T;
 export interface PlainObject {
   [key: string]: unknown;
 }

@@ -12,7 +12,7 @@ import {
   isWeakSet,
   isFunction,
   isObjectLike,
-} from 'lodash';
+} from 'lodash-es';
 
 export function isObject(value: unknown): boolean {
   return (

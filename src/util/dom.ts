@@ -1,3 +1,7 @@
+import { keys, get } from 'lodash-es';
+import { PlainObject } from '../types';
+import { Fn } from '@/types';
+
 export function addDomString(dist: HTMLElement, tpl: string): Element {
   const dom = String2Dom(tpl);
   dist.insertAdjacentElement('beforeend', dom);
@@ -119,4 +123,18 @@ export function slideAway(
       $target.addEventListener(TOUCHCANCEL, end);
     }
   });
+}
+
+/**
+ * 简单模版替换函数
+ * @param tpl
+ * @param obj
+ */
+export function template(tpl: string, obj: PlainObject): string {
+  const objKeys = keys(obj);
+  objKeys.forEach(key => {
+    const exp = new RegExp(`{{\\s*${key}\\s*}}`);
+    tpl = tpl.replace(exp, get(obj, key));
+  });
+  return tpl;
 }

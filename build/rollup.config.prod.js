@@ -1,3 +1,9 @@
-import base from './rollup.config.base';
-
-export default { ...base, ...{} };
+import base, { output, plugins } from './rollup.config.base';
+import { terser } from 'rollup-plugin-terser';
+export default {
+  ...base,
+  ...{
+    output,
+    plugins: [...plugins, terser()],
+  },
+};
